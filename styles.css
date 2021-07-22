@@ -1,0 +1,171 @@
+/*The default Theme color variables*/
+
+:root {
+  --MainBgColor: hsl(222, 26%, 31%);
+  --TextColor: white;
+  --ResultBg: hsl(224, 36%, 15%);
+  --mainbtnsBg: hsl(223, 31%, 20%);
+  --btnBg: hsl(30, 25%, 89%);
+  --numBtnColor: hsl(221, 14%, 31%);
+  --btnShadow: hsl(28, 16%, 65%);
+  --DelResBtn: hsl(225, 21%, 49%);
+  --DelResBtnShadow: hsl(224, 28%, 35%);
+  --equalBtn: hsl(6, 63%, 50%);
+  --equalBtnShadow: hsl(6, 70%, 34%);
+  --DelResEqualBtnColor: white;
+}
+
+/*The Light Theme color variables*/
+
+.Light-theme {
+  --MainBgColor: hsl(0, 0%, 90%);
+  --TextColor: hsl(60, 10%, 19%);
+  --ResultBg: hsl(0, 0%, 93%);
+  --mainbtnsBg: hsl(0, 5%, 81%);
+  --numBtnColor: hsl(60, 10%, 19%);
+  --btnBg: hsl(45, 7%, 89%);
+  --btnShadow: hsl(35, 11%, 61%);
+  --DelResBtn: hsl(185, 42%, 37%);
+  --DelResBtnShadow: hsl(185, 58%, 25%);
+  --equalBtn: hsl(25, 98%, 40%);
+  --equalBtnShadow: hsl(25, 99%, 27%);
+  --DelResEqualBtnColor: white;
+}
+
+/*The Violet Theme color variables*/
+
+.Violet-theme {
+  --MainBgColor: hsl(268, 75%, 9%);
+  --TextColor: hsl(52, 100%, 62%);
+  --ResultBg: hsl(268, 71%, 12%);
+  --mainbtnsBg: hsl(268, 71%, 12%);
+  --numBtnColor: hsl(52, 100%, 62%);
+  --btnBg: hsl(268, 47%, 21%);
+  --btnShadow: hsl(290, 70%, 36%);
+  --DelResBtn: hsl(281, 89%, 26%);
+  --DelResBtnShadow: hsl(285, 91%, 52%);
+  --equalBtn: hsl(176, 100%, 44%);
+  --equalBtnShadow: hsl(177, 92%, 70%);
+  --DelResEqualBtnColor: white;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: var(--MainBgColor);
+  font-family: "Spartan", sans-serif;
+
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  color: var(--TextColor);
+}
+.theme {
+  display: flex;
+  color: var(--TextColor);
+}
+.theme span {
+  margin: 15% 5%;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.i {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--TextColor);
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 5% 30%;
+}
+.result {
+  text-align: right;
+  font-size: x-large;
+  color: var(--TextColor);
+  padding: 10px;
+  font-weight: bolder;
+  height: 10vh;
+  margin: 10px 0px;
+  border-radius: 10px;
+  background-color: var(--ResultBg);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+button {
+  background-color: var(--btnBg);
+  border: none;
+  border-radius: 10px;
+  font-size: larger;
+  font-family: "Spartan", sans-serif;
+  color: var(--numBtnColor);
+  box-shadow: 0px 3px var(--btnShadow);
+}
+.btns {
+  overflow: hidden;
+  height: 36vh;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--mainbtnsBg);
+
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+}
+.Bl {
+  text-align: center;
+  color: var(--DelResEqualBtnColor);
+  background-color: var(--DelResBtn);
+  box-shadow: 0px 3px var(--DelResBtnShadow);
+}
+.Reset {
+  grid-column: 1/3;
+}
+.equal {
+  background-color: var(--equalBtn);
+  grid-column: 3/5;
+  color: var(--DelResEqualBtnColor);
+  box-shadow: 0px 3px var(--equalBtnShadow);
+}
+
+/* Responsive Design*/
+
+@media only screen and (max-width: 445px) {
+  .container {
+    margin: auto 10% 10% 10%;
+  }
+}
+
+@media only screen and (max-width: 226px) {
+  .head {
+    flex-direction: column;
+  }
+  button {
+    border-radius: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.062);
+  }
+  .btns {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0px;
+  }
+}
